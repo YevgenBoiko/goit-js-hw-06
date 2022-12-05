@@ -9,14 +9,8 @@ const destroyButton = document.querySelector("[data-destroy]");
 const amountInput = document.querySelector("#controls input");
 const boxesEl = document.querySelector("#boxes");
 
-let onInputAmount = 0;
-amountInput.addEventListener(
-  "blur",
-  () => (onInputAmount = Number(amountInput.value))
-);
-
 const createBoxes = (amount) => {
-  amount = onInputAmount;
+  amount = amountInput.value;
   let text = "";
   let dimention = 30;
   for (let i = 0; i < amount; i += 1) {
